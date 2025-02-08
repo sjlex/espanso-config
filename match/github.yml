@@ -1,0 +1,151 @@
+global_vars:
+
+  - name: github_profile
+    type: echo
+    params:
+      echo: https://github.com/sjlex
+
+  - name: ansible_my_wsl
+    type: echo
+    params:
+      echo: https://github.com/sjlex/ansible-my-wsl
+
+  - name: ansible_my_collection
+    type: echo
+    params:
+      echo: https://github.com/sjlex/ansible-my-collection
+
+  - name: vscode_theme_darcula_void
+    type: echo
+    params:
+      echo: https://github.com/sjlex/vscode-theme-darcula-void
+
+  - name: simon_game_test_assignment
+    type: echo
+    params:
+      echo: https://github.com/sjlex/simon-game-test-assignment
+
+  - name: patient_form_test_assignment
+    type: echo
+    params:
+      echo: https://github.com/sjlex/patient-form-test-assignment
+
+  - name: plain_prompt
+    type: echo
+    params:
+      echo: https://github.com/sjlex/plain-prompt
+
+  - name: ansible_my_workstation
+    type: echo
+    params:
+      echo: https://github.com/sjlex/ansible-my-workstation
+
+  - name: ansible_my_vpn
+    type: echo
+    params:
+      echo: https://github.com/sjlex/ansible-my-vpn
+
+  - name: espanso_config
+    type: echo
+    params:
+      echo: https://github.com/sjlex/espanso-config
+
+matches:
+
+  - regex: ":(gh|github)(p)"
+    replace: "{{github_profile}}"
+    label: "GitHub: Profile"
+    search_terms:
+      - github
+      - profile
+      - personal
+
+  - regex: ":(gh|github)(r)"
+    replace: "{{ansible_my_wsl}}"
+    label: "GitHub: ansible_my_wsl"
+    search_terms:
+      - github
+      - repository
+      - ansible
+      - my
+      - wsl
+
+  - regex: ":(gh|github)(r)"
+    replace: "{{ansible_my_collection}}"
+    label: "GitHub: ansible_my_collection"
+    search_terms:
+      - github
+      - repository
+      - ansible
+      - my
+      - collection
+
+  - regex: ":(gh|github)(r)"
+    replace: "{{vscode_theme_darcula_void}}"
+    label: "GitHub: vscode_theme_darcula_void"
+    search_terms:
+      - github
+      - repository
+      - vscode
+      - theme
+      - darcula
+
+  - regex: ":(gh|github)(r)"
+    replace: "{{simon_game_test_assignment}}"
+    label: "GitHub: simon_game_test_assignment"
+    search_terms:
+      - github
+      - repository
+      - simon
+      - game
+      - test
+      - assignment
+
+  - regex: ":(gh|github)(r)"
+    replace: "{{patient_form_test_assignment}}"
+    label: "GitHub: patient_form_test_assignment"
+    search_terms:
+      - github
+      - repository
+      - patient
+      - form
+      - test
+      - assignment
+
+  - regex: ":(gh|github)(r)"
+    replace: "{{plain_prompt}}"
+    label: "GitHub: plain_prompt"
+    search_terms:
+      - github
+      - repository
+      - plain
+      - prompt
+
+  - regex: ":(gh|github)(r)"
+    replace: "{{ansible_my_workstation}}"
+    label: "GitHub: ansible_my_workstation"
+    search_terms:
+      - github
+      - repository
+      - ansible
+      - my
+      - workstation
+
+  - regex: ":(gh|github)(r)"
+    replace: "{{ansible_my_vpn}}"
+    label: "GitHub: ansible_my_vpn"
+    search_terms:
+      - github
+      - repository
+      - ansible
+      - my
+      - vpn
+
+  - regex: ":(gh|github)(r)"
+    replace: "{{espanso_config}}"
+    label: "GitHub: espanso-config"
+    search_terms:
+      - github
+      - repository
+      - espanso
+      - config

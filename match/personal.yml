@@ -1,0 +1,27 @@
+global_vars:
+
+  - name: email_1
+    type: echo
+    params:
+      echo: serjalex19@gmail.com
+
+  - name: email_2
+    type: echo
+    params:
+      echo: sergei.a.aleks@gmail.com
+
+matches:
+
+  - regex: ":(e|email)(1)"
+    replace: "{{email_1}}"
+    label: "Email: Public"
+    search_terms:
+      - email
+      - public
+
+  - regex: ":(e|email)(2)"
+    replace: "{{email_2}}"
+    label: "Email: Personal"
+    search_terms:
+      - email
+      - personal

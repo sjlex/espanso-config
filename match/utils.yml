@@ -1,0 +1,42 @@
+matches:
+
+  - trigger: ":localip"
+    replace: "{{output}}"
+    label: "Utils: Local IP"
+    search_terms:
+      - utils
+      - ip
+      - local
+    vars:
+      - name: output
+        type: shell
+        params:
+          shell: powershell
+          cmd: "(Get-NetIPAddress -AddressFamily IPv4).IPAddress"
+
+  - trigger: ":ip"
+    replace: "{{output}}"
+    label: "Utils: Public IP"
+    search_terms:
+      - utils
+      - ip
+      - public
+    vars:
+      - name: output
+        type: shell
+        params:
+          shell: powershell
+          cmd: "(Invoke-RestMethod -Uri 'https://api.ipify.org?format=text')"
+
+  - trigger: ":uuid"
+    replace: "{{output}}"
+    label: "Utils: UUID"
+    search_terms:
+      - utils
+      - uuid
+    vars:
+      - name: output
+        type: shell
+        params:
+          shell: powershell
+          cmd: "[guid]::NewGuid().ToString()"
