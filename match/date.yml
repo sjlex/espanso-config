@@ -1,0 +1,55 @@
+matches:
+
+  - triggers: [":tt", ":time", ":now"]
+    replace: "{{time_now}}"
+    label: "Time: Now"
+    search_terms:
+      - time
+      - now
+    vars:
+      - name: time_now
+        type: date
+        params:
+          format: "%H:%M"
+
+  - triggers: [":tf"]
+    replace: "{{time_now}}"
+    label: "Time: Now (Full)"
+    search_terms:
+      - time
+      - now
+      - full
+    vars:
+      - name: time_now
+        type: date
+        params:
+          format: "%T"
+
+  - triggers: [":tr"]
+    replace: "{{time_now}}"
+    label: "Time: Now (ISO-8601 / RFC-3339)"
+    search_terms:
+      - time
+      - now
+      - ISO-8601
+    vars:
+      - name: time_now
+        type: date
+        params:
+          format: "%+"
+
+  - triggers: [":td", ":date", ":today"]
+    replace: "{{date_now}}"
+    label: "Date: Today (ISO-8601: YYYY-MM-DD)"
+    search_terms:
+      - date
+      - today
+      - ISO-8601
+    vars:
+      - name: date_now
+        type: date
+        params:
+          format: "%F"
+
+
+

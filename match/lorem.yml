@@ -1,0 +1,268 @@
+# Lorem Ipsum
+
+# author: Dominique Da Silva
+# description: Lorem ipsum sentences and paragraphs generator.
+# name: lorem
+# title: Lorem Ipsum
+# version: 0.1.0
+# homepage: "https://github.com/atika/espanso-lorem"
+# tags: ["lorem", "design", "utility"]
+
+matches:
+
+  # Sentence
+  - trigger: ":lorem1"
+    replace: "{{output}}"
+    label: "Lorem: Sentence #1"
+    search_terms:
+      - lorem
+      - text
+      - generator
+      - sentence
+    vars:
+      - name: output
+        type: random
+        params:
+          choices:
+            - "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            - "Vestibulum rhoncus lectus non lorem rutrum, non lobortis lacus consequat."
+            - "Ut ullamcorper, nulla in tincidunt vulputate, erat ligula consectetur sem, posuere interdum libero libero ut - orci."
+            - "Vestibulum enim enim, commodo a vestibulum ut, tincidunt luctus ante."
+            - "Duis consequat ut orci vitae hendrerit."
+            - "Etiam sit amet enim ac turpis cursus porttitor eget id lacus."
+            - "Sed ultricies odio a orci sollicitudin, a lacinia mi porttitor."
+            - "Nunc gravida in risus non tincidunt."
+            - "Integer ante elit, pharetra nec enim viverra, tempor egestas nisl."
+            - "Integer porta, nunc a maximus mollis, neque tellus aliquet mauris, a tempus turpis lectus ut quam."
+            - "Donec sollicitudin, est nec fringilla cursus, ante ligula interdum nibh, eu auctor libero diam hendrerit elit."
+            - "Aenean tincidunt metus at magna finibus convallis."
+            - "Sed bibendum imperdiet augue, finibus fermentum tellus egestasF vitae."
+            - "Aliquam erat volutpat."
+            - "Fusce ipsum dui, consequat sit amet hendrerit id, volutpat eget dui."
+            - "Ut vel nibh mauris."
+            - "Maecenas in magna non metus cursus efficitur non in orci."
+            - "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+            - "Aliquam erat volutpat."
+            - "Praesent lectus augue, elementum id orci quis, pulvinar porttitor elit."
+            - "Sed in tincidunt augue."
+            - "Nunc ullamcorper augue porttitor, tempus tellus quis, finibus velit."
+            - "Suspendisse laoreet purus congue orci faucibus aliquet."
+            - "Integer gravida elit eu nulla pretium interdum."
+            - "Integer semper erat in nibh varius lobortis."
+            - "Maecenas hendrerit ligula in vehicula tincidunt."
+            - "Phasellus non vulputate urna."
+            - "Mauris id eros fermentum, vulputate dui a, pharetra nisi."
+            - "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+            - "Nunc scelerisque tellus tellus, non ultricies ligula tristique at."
+            - "Vivamus nisi lorem, porttitor non convallis sed, tincidunt nec enim."
+            - "Suspendisse rhoncus luctus libero in facilisis."
+            - "Cras vitae mollis purus."
+            - "Integer est urna, iaculis a magna ut, porta lacinia nunc."
+            - "Morbi dictum, libero non tempor porttitor, justo nibh pellentesque mi, eu blandit velit ante non magna."
+            - "Maecenas sodales tempor ligula ut efficitur."
+            - "Proin id neque ac augue gravida sollicitudin id et libero."
+            - "Aliquam mollis, lectus vitae sodales dapibus, ipsum neque sollicitudin nunc, quis rutrum sapien arcu sit amet mi."
+            - "Integer elementum mauris vitae diam ultrices, vitae mollis massa suscipit."
+            - "Nullam et vulputate nulla."
+            - "Morbi dictum nunc odio, eget congue dolor maximus vel."
+            - "Praesent maximus urna sed neque ultricies, quis pulvinar augue faucibus."
+            - "Etiam eu sem lacinia, vehicula orci a, feugiat odio."
+            - "Quisque mollis tempor nibh, vitae interdum elit venenatis in."
+            - "Integer molestie eu libero nec placerat."
+            - "Praesent in lobortis nibh, ac egestas leo."
+            - "Integer facilisis aliquet urna, et imperdiet arcu commodo vitae."
+            - "Ut eget ante vitae nunc commodo molestie."
+            - "Aenean feugiat nulla quis libero dapibus, eu molestie ipsum consequat."
+            - "Curabitur iaculis in sapien at vestibulum."
+            - "Sed quis lorem eu purus viverra congue."
+            - "Pellentesque at tempus justo."
+            - "Sed lobortis ipsum in metus tempus vulputate."
+            - "Maecenas quis blandit nisl."
+            - "Proin tempus suscipit interdum."
+            - "Sed iaculis lectus sed metus ornare, id efficitur est vulputate."
+            - "Morbi ornare justo vitae rhoncus blandit."
+            - "Vivamus mollis sem ac justo cursus, sit amet aliquet libero luctus."
+            - "Quisque rhoncus tristique tortor, at malesuada felis finibus at."
+            - "Nullam mollis augue et justo imperdiet, et finibus felis rhoncus."
+            - "Fusce non velit eget purus sagittis vehicula non sed turpis."
+            - "Proin aliquam metus id lobortis suscipit."
+            - "Donec ut purus dui."
+            - "Maecenas ante nulla, tempus quis euismod vitae, accumsan quis odio."
+            - "Mauris odio dolor, molestie et venenatis sit amet, efficitur eget tortor."
+            - "Phasellus laoreet viverra condimentum."
+
+  # Multiples sentences
+  - trigger: ":lorem2"
+    replace: "{{one}} {{two}}"
+    label: "Lorem: Sentence #2"
+    search_terms:
+      - lorem
+      - text
+      - generator
+      - sentence
+    vars:
+      - name: one
+        type: match
+        params:
+          trigger: ":lorem1"
+      - name: two
+        type: match
+        params:
+          trigger: ":lorem1"
+
+  - trigger: ":lorem3"
+    replace: "{{two}} {{three}}"
+    label: "Lorem: Sentence #3"
+    search_terms:
+      - lorem
+      - text
+      - generator
+      - sentence
+    vars:
+      - name: two
+        type: match
+        params:
+          trigger: ":lorem2"
+      - name: three
+        type: match
+        params:
+          trigger: ":lorem1"
+
+  - trigger: ":lorem4"
+    replace: "{{three}} {{four}}"
+    label: "Lorem: Sentence #4"
+    search_terms:
+      - lorem
+      - text
+      - generator
+      - sentence
+    vars:
+      - name: three
+        type: match
+        params:
+          trigger: ":lorem2"
+      - name: four
+        type: match
+        params:
+          trigger: ":lorem2"
+
+  - trigger: ":lorem5"
+    replace: "{{four}} {{five}}"
+    label: "Lorem: Sentence #5"
+    search_terms:
+      - lorem
+      - text
+      - generator
+      - sentence
+    vars:
+      - name: four
+        type: match
+        params:
+          trigger: ":lorem4"
+      - name: five
+        type: match
+        params:
+          trigger: ":lorem1"
+
+  # Paragraph
+  - trigger: ":loremp1"
+    replace: "{{output}}"
+    label: "Lorem: Paragraph #1"
+    search_terms:
+      - lorem
+      - text
+      - generator
+      - paragraph
+    vars:
+      - name: output
+        type: random
+        params:
+          choices:
+            - "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Donec sed odio operae, eu vulputate felis rhoncus. Salutantibus vitae elit libero, a pharetra augue. Nihil hic munitissimus habendi senatus locus, nihil horum? A communi observantia non est recedendum."
+            - "Curabitur blandit tempus ardua ridiculus sed magna. Sed haec quis possit intrepidus aestimare tellus. Quisque ut dolor gravida, placerat libero vel, euismod. Plura mihi bona sunt, inclinet, amari petere vellent."
+            - "Fictum, deserunt mollit anim laborum astutumque! Quisque placerat facilisis egestas cillum dolore. Nec dubitamus multa iter quae et nos invenerat. Contra legem facit qui id facit quod lex prohibet. Quam diu etiam furor iste tuus nos eludet?"
+            - "Plura mihi bona sunt, inclinet, amari petere vellent. Ab illo tempore, ab est sed immemorabili. Ullamco laboris nisi ut aliquid ex ea commodi consequat. Quae vero auctorem tractata ab fiducia dicuntur. At nos hinc posthac, sitientis piros Afros."
+            - "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Me non paenitet nullum festiviorem excogitasse ad hoc. Ambitioni dedisse scripsisse iudicaretur. Unam incolunt Belgae, aliam Aquitani, tertiam. Morbi fringilla convallis sapien, id pulvinar odio volutpat. A communi observantia non est recedendum."
+            - "Quisque ut dolor gravida, placerat libero vel, euismod. Ambitioni dedisse scripsisse iudicaretur. Donec sed odio operae, eu vulputate felis rhoncus. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae."
+            - "Fabio vel iudice vincam, sunt in culpa qui officia. Inmensae subtilitatis, obscuris et malesuada fames. Ambitioni dedisse scripsisse iudicaretur. Nec dubitamus multa iter quae et nos invenerat. Petierunt uti sibi concilium totius Galliae in diem certam indicere."
+            - "A communi observantia non est recedendum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae."
+            - "Non equidem invideo, miror magis posuere velit aliquet. Quisque placerat facilisis egestas cillum dolore. Curabitur blandit tempus ardua ridiculus sed magna. Contra legem facit qui id facit quod lex prohibet. Petierunt uti sibi concilium totius Galliae in diem certam indicere."
+            - "Ab illo tempore, ab est sed immemorabili. Cum sociis natoque penatibus et magnis dis parturient. Quam diu etiam furor iste tuus nos eludet? Ut enim ad minim veniam, quis nostrud exercitation."
+            - "Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae. Salutantibus vitae elit libero, a pharetra augue. Quam diu etiam furor iste tuus nos eludet? Fabio vel iudice vincam, sunt in culpa qui officia. Quam temere in vitiis, legem sancimus haerentia. Quisque ut dolor gravida, placerat libero vel, euismod."
+            - "Morbi fringilla convallis sapien, id pulvinar odio volutpat. Hi omnes lingua, institutis, legibus inter se differunt. Non equidem invideo, miror magis posuere velit aliquet. Quid securi etiam tamquam eu fugiat nulla pariatur. Inmensae subtilitatis, obscuris et malesuada fames. Fictum, deserunt mollit anim laborum astutumque!"
+            - "Cum sociis natoque penatibus et magnis dis parturient. Curabitur blandit tempus ardua ridiculus sed magna. Salutantibus vitae elit libero, a pharetra augue."
+            - "Petierunt uti sibi concilium totius Galliae in diem certam indicere. Morbi fringilla convallis sapien, id pulvinar odio volutpat. A communi observantia non est recedendum."
+            - "Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi."
+
+  # Multiples paragraphs
+  - trigger: ":loremp2"
+    replace: "{{one}}\n\n{{two}}"
+    label: "Lorem: Paragraph #2"
+    search_terms:
+      - lorem
+      - text
+      - generator
+      - paragraph
+    vars:
+      - name: one
+        type: match
+        params:
+          trigger: ":loremp1"
+      - name: two
+        type: match
+        params:
+          trigger: ":loremp1"
+
+  - trigger: ":loremp3"
+    replace: "{{two}}\n\n{{three}}"
+    label: "Lorem: Paragraph #3"
+    search_terms:
+      - lorem
+      - text
+      - generator
+      - paragraph
+    vars:
+      - name: two
+        type: match
+        params:
+          trigger: ":loremp2"
+      - name: three
+        type: match
+        params:
+          trigger: ":loremp1"
+
+  - trigger: ":loremp4"
+    replace: "{{three}}\n\n{{four}}"
+    label: "Lorem: Paragraph #4"
+    search_terms:
+      - lorem
+      - text
+      - generator
+      - paragraph
+    vars:
+      - name: three
+        type: match
+        params:
+          trigger: ":loremp2"
+      - name: four
+        type: match
+        params:
+          trigger: ":loremp2"
+
+  - trigger: ":loremp5"
+    replace: "{{four}}\n\n{{five}}"
+    label: "Lorem: Paragraph #5"
+    search_terms:
+      - lorem
+      - text
+      - generator
+      - paragraph
+    vars:
+      - name: four
+        type: match
+        params:
+          trigger: ":loremp4"
+      - name: five
+        type: match
+        params:
+          trigger: ":loremp1"
